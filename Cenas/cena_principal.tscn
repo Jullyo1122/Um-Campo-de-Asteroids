@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bam4eewxhcipc"]
+
+[ext_resource type="PackedScene" uid="uid://c5xhvavcvyy" path="res://Entities/player.tscn" id="1_rw51x"]
+[ext_resource type="PackedScene" uid="uid://8xxveg7l1r75" path="res://Entities/asteroids.tscn" id="2_q4qsu"]
+[ext_resource type="PackedScene" uid="uid://cahjxrkycka87" path="res://Entities/star.tscn" id="3_r8678"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q4qsu"]
+load_path = "res://.godot/imported/background.png-24d76ec65435476e2c2a773432f9cd87.ctex"
+
+[node name="CenaPrincipal" type="Node2D" unique_id=1672473890]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312810001]
+position = Vector2(558, 338)
+texture = SubResource("CompressedTexture2D_q4qsu")
+
+[node name="Player" parent="." unique_id=321563379 instance=ExtResource("1_rw51x")]
+position = Vector2(640, 578)
+scale = Vector2(3, 3)
+
+[node name="Asteroids" parent="." unique_id=336035660 instance=ExtResource("2_q4qsu")]
+position = Vector2(78, 40)
+scale = Vector2(3, 3)
+
+[node name="Asteroids2" parent="." unique_id=1534999842 instance=ExtResource("2_q4qsu")]
+position = Vector2(305, 207.00002)
+scale = Vector2(3, 3)
+
+[node name="Asteroids3" parent="." unique_id=797693518 instance=ExtResource("2_q4qsu")]
+position = Vector2(998, 57)
+scale = Vector2(3, 3)
+
+[node name="Asteroids4" parent="." unique_id=1887748506 instance=ExtResource("2_q4qsu")]
+position = Vector2(796, 246)
+scale = Vector2(3, 3)
+
+[node name="Asteroids5" parent="." unique_id=847430047 instance=ExtResource("2_q4qsu")]
+position = Vector2(527, 113)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D2" parent="." unique_id=712893100 instance=ExtResource("3_r8678")]
+position = Vector2(67, 231.00009)
+
+[node name="Star" parent="." unique_id=1019166819 instance=ExtResource("3_r8678")]
+position = Vector2(542, 441.00003)
+scale = Vector2(0.7, 0.833)
+
+[node name="Star2" parent="." unique_id=258773933 instance=ExtResource("3_r8678")]
+position = Vector2(784, 52.999996)
+
+[node name="Star3" parent="." unique_id=369094064 instance=ExtResource("3_r8678")]
+position = Vector2(330, 68.99999)
+
+[node name="Star4" parent="." unique_id=2122819917 instance=ExtResource("3_r8678")]
+position = Vector2(229, 445.99997)
+
+[node name="Star5" parent="." unique_id=1220059751 instance=ExtResource("3_r8678")]
+position = Vector2(1106, 76.99999)
+
+[node name="Star6" parent="." unique_id=608183527 instance=ExtResource("3_r8678")]
+position = Vector2(577, 241.99998)
+
+[node name="Star7" parent="." unique_id=678286552 instance=ExtResource("3_r8678")]
+position = Vector2(947, 311.99997)
+
+[node name="Star8" parent="." unique_id=1246337031 instance=ExtResource("3_r8678")]
+position = Vector2(837, 479.99997)
+
+[node name="Star9" parent="." unique_id=1913376881 instance=ExtResource("3_r8678")]
+position = Vector2(140, 31.999998)
+
+[node name="Star10" parent="." unique_id=387666070 instance=ExtResource("3_r8678")]
+position = Vector2(1092, 398.99997)
+
+[node name="Star11" parent="." unique_id=1783108675 instance=ExtResource("3_r8678")]
+position = Vector2(358, 294.99997)
+
+[node name="Star12" parent="." unique_id=210037289 instance=ExtResource("3_r8678")]
+position = Vector2(43, 408.99997)
+
+[node name="Star13" parent="." unique_id=911477350 instance=ExtResource("3_r8678")]
+position = Vector2(871, 175.99998)

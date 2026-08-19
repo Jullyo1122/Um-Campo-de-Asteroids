@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5xhvavcvyy"]
+
+[ext_resource type="Script" uid="uid://b1i5txf0mkjcp" path="res://Entities/player.gd" id="1_gb1tc"]
+[ext_resource type="Texture2D" uid="uid://b2emu7q1ec8ww" path="res://Sprites/Assets definidoss/Nave.png" id="1_trstq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcnsb"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D" unique_id=321563379]
+script = ExtResource("1_gb1tc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504497488]
+texture = ExtResource("1_trstq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=847725304]
+shape = SubResource("CapsuleShape2D_tcnsb")

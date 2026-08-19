@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cahjxrkycka87"]
+
+[ext_resource type="Texture2D" uid="uid://b26ckpxo5jhs6" path="res://Sprites/Assets definidoss/ALTNS SparklingStar.png" id="1_qgldr"]
+[ext_resource type="Script" uid="uid://3eb5uhcbjcp4" path="res://Entities/star.gd" id="1_x5mnx"]
+
+[node name="Star" type="Area2D" unique_id=1019166819]
+scale = Vector2(0.34817213, 0.4140621)
+script = ExtResource("1_x5mnx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=101709206]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(1, 0.8773588)
+texture = ExtResource("1_qgldr")
+hframes = 5
