@@ -7,6 +7,7 @@
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=321563379]
+z_index = 1
 script = ExtResource("1_gb1tc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1504497488]

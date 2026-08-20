@@ -1,6 +1,6 @@
-extends Area2D
+extends Node2D
 
-@export var speed: float = 1000.0
+@export var speed: float = 500.0
 
 func _process(delta):
 	position.y += speed * delta
