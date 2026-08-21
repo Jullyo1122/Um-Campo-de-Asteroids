@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://b2u72tetp235h" path="res://Entities/star_spawner.gd" id="4_r8678"]
 [ext_resource type="PackedScene" uid="uid://cj1vc3b741e4v" path="res://Entities/asteroids2.tscn" id="5_tgbm0"]
 [ext_resource type="Script" uid="uid://dpf2tkpyxanw3" path="res://Entities/asteroid_spawner.gd" id="7_7mssv"]
-[ext_resource type="Script" uid="uid://cgeqm2oxsqwdv" path="res://Cenas/asteroid_spawner_2.gd" id="7_shygk"]
+[ext_resource type="Script" uid="uid://cgeqm2oxsqwdv" path="res://Entities/asteroid_spawner_2.gd" id="7_shygk"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q4qsu"]
 load_path = "res://.godot/imported/background.png-24d76ec65435476e2c2a773432f9cd87.ctex"

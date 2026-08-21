@@ -20,3 +20,9 @@ func _physics_process(delta):
 		half_width,
 		screen_size.x - half_width
 	)
+	
+	for collision in get_slide_collision_count():
+		var collision_info = get_slide_collision(collision)
+		var collider = collision_info.get_collider()
+		if collider.is_in_group("asteroids"):
+			print("A nave foi atingida!")

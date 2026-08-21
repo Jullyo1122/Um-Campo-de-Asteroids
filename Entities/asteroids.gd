@@ -7,3 +7,9 @@ func _process(delta):
 
 	if position.y > get_viewport_rect().size.y + 150:
 		queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+
+	if body.name == "Player":
+		print("A nave foi atingida!")
