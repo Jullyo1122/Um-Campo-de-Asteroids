@@ -2,9 +2,81 @@
 
 [ext_resource type="Script" uid="uid://b1i5txf0mkjcp" path="res://Entities/player.gd" id="1_gb1tc"]
 [ext_resource type="Texture2D" uid="uid://b2emu7q1ec8ww" path="res://Sprites/Assets definidoss/Nave.png" id="1_trstq"]
+[ext_resource type="Texture2D" uid="uid://cleor1et1u7q4" path="res://Sprites/Assets definidoss/explosion.png" id="3_xd3k7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcnsb"]
 radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taegk"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kee72"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prmdv"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1j76"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jj0l"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua6mu"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy0x1"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xakct"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k47j4"]
+atlas = ExtResource("3_xd3k7")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_klb6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taegk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kee72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prmdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1j76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jj0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua6mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy0x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xakct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k47j4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=321563379]
 z_index = 1
@@ -15,3 +87,8 @@ texture = ExtResource("1_trstq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=847725304]
 shape = SubResource("CapsuleShape2D_tcnsb")
+
+[node name="Explosion" type="AnimatedSprite2D" parent="." unique_id=1433426504]
+visible = false
+sprite_frames = SubResource("SpriteFrames_klb6e")
+frame_progress = 0.41805583
