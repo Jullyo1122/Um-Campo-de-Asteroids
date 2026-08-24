@@ -16,3 +16,5 @@ frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2007198675]
 shape = SubResource("RectangleShape2D_p6co5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

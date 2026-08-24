@@ -27,6 +27,11 @@ func _physics_process(delta):
 		half_width,
 		screen_size.x - half_width
 	)
+	
+func aumentar_velocidade(nivel_atual: int):
+	# Aumenta 20 de velocidade a cada nível. Ajuste esse valor como preferir.
+	SPEED = 300.0 + ((nivel_atual - 1) * 60.0)
+	print("Nova velocidade do jogador: ", SPEED)
 
 
 func die():
