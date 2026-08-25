@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgbojx1mx1v6i"
+path="res://.godot/imported/data_pion-sfx40-bomb-short-534296.mp3-023325a73350a743e4d345a189db92ad.mp3str"
+
+[deps]
+
+source_file="res://BGM e SFX/data_pion-sfx40-bomb-short-534296.mp3"
+dest_files=["res://.godot/imported/data_pion-sfx40-bomb-short-534296.mp3-023325a73350a743e4d345a189db92ad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

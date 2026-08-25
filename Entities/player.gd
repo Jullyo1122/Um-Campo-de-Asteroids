@@ -7,6 +7,7 @@ signal jogador_morreu
 @onready var sprite = $Sprite2D
 @onready var explosion = $Explosion
 @onready var collision_shape = $CollisionShape2D
+@onready var sound_explosion = $SoundExplosion
 
 var dead = false
 
@@ -45,6 +46,9 @@ func die():
 	velocity = Vector2.ZERO
 
 	sprite.hide()
+	
+	sound_explosion.play()
+	
 	collision_shape.set_deferred("disabled", true)
 
 	explosion.show()

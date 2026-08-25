@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwg277bjbuqbn"
+path="res://.godot/imported/brutaldesign-pixel-art-481480 (1).mp3-d851a85d4bae70c562580771d9af6872.mp3str"
+
+[deps]
+
+source_file="res://BGM e SFX/brutaldesign-pixel-art-481480 (1).mp3"
+dest_files=["res://.godot/imported/brutaldesign-pixel-art-481480 (1).mp3-d851a85d4bae70c562580771d9af6872.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
