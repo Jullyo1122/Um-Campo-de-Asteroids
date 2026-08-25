@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal jogador_morreu
+
 @export var SPEED: float = 300.0
 
 @onready var sprite = $Sprite2D
@@ -47,3 +49,5 @@ func die():
 
 	explosion.show()
 	explosion.play("default")
+	
+	jogador_morreu.emit()

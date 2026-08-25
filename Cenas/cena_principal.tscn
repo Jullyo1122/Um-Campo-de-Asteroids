@@ -116,6 +116,13 @@ asteroid_scene = ExtResource("5_tgbm0")
 wait_time = 0.595
 autostart = true
 
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1163151120]
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=1660689145]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
+
 [connection signal="timeout" from="StarSpawner/Timer" to="StarSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="AsteroidSpawner/Timer" to="AsteroidSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="AsteroidSpawner2/Timer" to="AsteroidSpawner2" method="_on_timer_timeout"]
