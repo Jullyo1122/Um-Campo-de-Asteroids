@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cwrl1xb842lwn"]
+
+[ext_resource type="Texture2D" uid="uid://ceoul4w4g3jo7" path="res://BGM e SFX/ChatGPT Image 26 de ago. de 2026, 18_16_04.png" id="1_pveh2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pveh2"]
+bg_color = Color(1, 0.12941177, 0.68235296, 0.5176471)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9882353, 0, 0.8156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpgfy"]
+bg_color = Color(0.9882353, 0, 0.8156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eheat"]
+bg_color = Color(0.9882353, 0, 0.8156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1n12"]
+bg_color = Color(0.047058824, 0.41960785, 1, 0.4862745)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fapvr"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdsmm"]
+bg_color = Color(0, 0, 1, 1)
+
+[node name="Control" type="Control" unique_id=1622927711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1558867789]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 1511.0
+offset_bottom = 1009.0
+texture = ExtResource("1_pveh2")
+
+[node name="MenuInicial" type="VBoxContainer" parent="." unique_id=565851178]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.23600002
+anchor_right = 0.5
+anchor_bottom = 0.23600002
+offset_left = -142.5
+offset_top = -77.16402
+offset_right = 142.5
+offset_bottom = 411.836
+
+[node name="LogoJogo" type="TextureRect" parent="MenuInicial" unique_id=176212175]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MenuInicial" unique_id=2062103048]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pveh2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpgfy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eheat")
+text = "Play"
+
+[node name="Settings" type="Button" parent="MenuInicial" unique_id=869867570]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_u1n12")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fapvr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kdsmm")
+text = "Settings"
+
+[node name="Panel" type="Panel" parent="." unique_id=977878427]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 77.0
+offset_right = 721.0
+offset_bottom = 350.0
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=331138469]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 7.0
+offset_right = 172.0
+offset_bottom = 30.0
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="SecaoSom" type="HBoxContainer" parent="Panel" unique_id=973255316]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 285.0
+offset_bottom = 117.0
+
+[node name="LabelSom" type="Label" parent="Panel/SecaoSom" unique_id=1488796460]
+layout_mode = 2
+
+[node name="ButtonToggleSom" type="CheckButton" parent="Panel/SecaoSom" unique_id=270821809]
+layout_mode = 2
+
+[node name="SecaoControls" type="Label" parent="Panel" unique_id=454533954]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 109.0
+offset_right = 288.0
+offset_bottom = 178.0
+
+[node name="BotaoVoltar" type="Button" parent="Panel" unique_id=397766121]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.029000001
+offset_left = 85.0
+offset_top = 177.0
+offset_right = 202.0
+offset_bottom = 216.083
+text = "Voltar
+"
