@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cwrl1xb842lwn"]
 
 [ext_resource type="Texture2D" uid="uid://ceoul4w4g3jo7" path="res://BGM e SFX/ChatGPT Image 26 de ago. de 2026, 18_16_04.png" id="1_pveh2"]
+[ext_resource type="Script" uid="uid://jfhb54jht1ct" path="res://Entities/menu.gd" id="1_u1n12"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pveh2"]
 bg_color = Color(1, 0.12941177, 0.68235296, 0.5176471)
@@ -30,6 +31,44 @@ bg_color = Color(0, 0, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdsmm"]
 bg_color = Color(0, 0, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lfl8"]
+bg_color = Color(0.047058824, 0, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plcv4"]
+bg_color = Color(0.85882354, 0.80784315, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8666667, 0.85490197, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8aipq"]
+bg_color = Color(0.8666667, 0.85490197, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1evsv"]
+bg_color = Color(0.8666667, 0.85490197, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [node name="Control" type="Control" unique_id=1622927711]
 layout_mode = 3
 anchors_preset = 15
@@ -39,6 +78,7 @@ offset_left = -1.0
 offset_top = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u1n12")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1558867789]
 layout_mode = 0
@@ -79,46 +119,64 @@ text = "Settings"
 
 [node name="Panel" type="Panel" parent="." unique_id=977878427]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 77.0
-offset_right = 721.0
-offset_bottom = 350.0
+offset_left = 408.0
+offset_top = 164.0
+offset_right = 736.0
+offset_bottom = 437.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8lfl8")
 
 [node name="Titulo" type="Label" parent="Panel" unique_id=331138469]
 layout_mode = 0
-offset_left = 110.0
-offset_top = 7.0
-offset_right = 172.0
-offset_bottom = 30.0
+offset_left = 122.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 20
 text = "Settings"
 horizontal_alignment = 1
 
 [node name="SecaoSom" type="HBoxContainer" parent="Panel" unique_id=973255316]
 layout_mode = 0
-offset_top = 42.0
-offset_right = 285.0
-offset_bottom = 117.0
+offset_left = 27.0
+offset_top = 47.0
+offset_right = 109.0
+offset_bottom = 122.0
 
 [node name="LabelSom" type="Label" parent="Panel/SecaoSom" unique_id=1488796460]
 layout_mode = 2
+text = "Som"
+horizontal_alignment = 1
 
 [node name="ButtonToggleSom" type="CheckButton" parent="Panel/SecaoSom" unique_id=270821809]
 layout_mode = 2
 
 [node name="SecaoControls" type="Label" parent="Panel" unique_id=454533954]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 109.0
-offset_right = 288.0
-offset_bottom = 178.0
+offset_left = 27.0
+offset_top = 102.0
+offset_right = 313.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 13
+text = "CONTROLES:
+ - Mover para Esquerda: [ Seta Esquerda / A ]
+ - Mover para Direita:  [ Seta Direita  / D ]"
 
 [node name="BotaoVoltar" type="Button" parent="Panel" unique_id=397766121]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.029000001
-offset_left = 85.0
-offset_top = 177.0
-offset_right = 202.0
-offset_bottom = 216.083
+offset_left = 109.0
+offset_top = 192.0
+offset_right = 226.0
+offset_bottom = 231.083
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_plcv4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8aipq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1evsv")
 text = "Voltar
 "
+
+[connection signal="pressed" from="MenuInicial/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuInicial/Settings" to="." method="_on_settings_pressed"]
+[connection signal="toggled" from="Panel/SecaoSom/ButtonToggleSom" to="." method="_on_button_toggle_som_toggled"]
+[connection signal="pressed" from="Panel/BotaoVoltar" to="." method="_on_botao_voltar_pressed"]

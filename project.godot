@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Um Campo de Asteorids"
-run/main_scene="res://Cenas/cena_principal.tscn"
+run/main_scene="uid://cwrl1xb842lwn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
