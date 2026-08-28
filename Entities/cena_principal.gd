@@ -14,9 +14,11 @@ const ICONE_PLAY = preload("res://BGM e SFX/Design_sem_nome__6_-removebg-preview
 @onready var game_over_label = $HUD/GameOverLabel
 @onready var menu_pause = $HUD/MenuPause
 @onready var pause_button = $HUD/TextureButton 
+@onready var game_over_panel = $HUD/GameOverPanel
+@onready var score_final_label = $HUD/GameOverPanel/VBoxContainer/ScoreFinalLabel
 
 func _ready():
-	game_over_label.hide()
+	game_over_panel.hide()
 	menu_pause.hide()
 	
 	menu_pause.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -69,8 +71,9 @@ func _on_jogador_morreu():
 	game_over = true
 	asteroid_timer.stop() 
 	pause_button.hide() 
-	game_over_label.text = "GAME OVER!\nPontuação Final: " + str(score) + "\n\nPressione ESPAÇO ou ENTER para reiniciar"
-	game_over_label.show()
+	
+	score_final_label.text = "Final Score: " + str(score)
+	game_over_panel.show()
 
 func _process(delta):
 	if game_over:

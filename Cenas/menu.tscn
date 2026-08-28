@@ -18,7 +18,7 @@ bg_color = Color(0.9882353, 0, 0.8156863, 1)
 bg_color = Color(0.9882353, 0, 0.8156863, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1n12"]
-bg_color = Color(0.047058824, 0.41960785, 1, 0.4862745)
+bg_color = Color(0.047058824, 0, 1, 0.2784314)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -32,12 +32,12 @@ bg_color = Color(0, 0, 1, 1)
 bg_color = Color(0, 0, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lfl8"]
-bg_color = Color(0.047058824, 0, 1, 1)
+bg_color = Color(0.047058824, 0, 1, 0.2784314)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -144,7 +144,7 @@ offset_bottom = 122.0
 
 [node name="LabelSom" type="Label" parent="Panel/SecaoSom" unique_id=1488796460]
 layout_mode = 2
-text = "Som"
+text = "Sound"
 horizontal_alignment = 1
 
 [node name="ButtonToggleSom" type="CheckButton" parent="Panel/SecaoSom" unique_id=270821809]
@@ -157,9 +157,9 @@ offset_top = 102.0
 offset_right = 313.0
 offset_bottom = 171.0
 theme_override_font_sizes/font_size = 13
-text = "CONTROLES:
- - Mover para Esquerda: [ Seta Esquerda / A ]
- - Mover para Direita:  [ Seta Direita  / D ]"
+text = "CONTROLS:
+ - Move Left:  [ Left Arrow / A ]
+ - Move Right: [ Right Arrow / D ]"
 
 [node name="BotaoVoltar" type="Button" parent="Panel" unique_id=397766121]
 layout_mode = 1
@@ -173,7 +173,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_plcv4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8aipq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1evsv")
-text = "Voltar
+text = "Back
 "
 
 [connection signal="pressed" from="MenuInicial/Play" to="." method="_on_play_pressed"]

@@ -44,26 +44,12 @@ bg_color = Color(0, 1, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8plms"]
 bg_color = Color(0, 1, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sup3"]
-bg_color = Color(0.8666667, 0.85490197, 0, 0.2)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.8666667, 0.85490197, 0, 1)
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irlkx"]
-bg_color = Color(0.8666667, 0.85490197, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_740cl"]
-bg_color = Color(0.8666667, 0.85490197, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyinj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sup3"]
 bg_color = Color(1, 0.28235295, 0, 0.5058824)
 border_width_left = 1
 border_width_top = 1
@@ -75,13 +61,52 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ov2kt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irlkx"]
 bg_color = Color(1, 0.28235295, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_740cl"]
+bg_color = Color(1, 0.28235295, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyinj"]
+bg_color = Color(0, 0, 1, 0.39215687)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ov2kt"]
+bg_color = Color(0, 0, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pv47"]
-bg_color = Color(1, 0.28235295, 0, 1)
+bg_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsbkq"]
+bg_color = Color(0.81960785, 0, 0.06666667, 0.36078432)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.81960785, 0, 0.06666667, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="CenaPrincipal" type="Node2D" unique_id=1672473890]
+position = Vector2(-1, 0)
 script = ExtResource("1_shygk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312810001]
@@ -209,23 +234,24 @@ offset_right = 477.0
 offset_bottom = 251.0
 
 [node name="MenuPause" type="Panel" parent="HUD" unique_id=2127068176]
-offset_left = 399.0
-offset_top = 171.0
-offset_right = 756.0
-offset_bottom = 406.0
+offset_left = 397.0
+offset_top = 175.0
+offset_right = 754.0
+offset_bottom = 410.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_m3bsw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUD/MenuPause" unique_id=1732364491]
 layout_mode = 0
 offset_left = 114.0
-offset_top = 22.0
+offset_top = 40.0
 offset_right = 241.0
-offset_bottom = 205.0
+offset_bottom = 223.0
+theme_override_constants/separation = 10
 
 [node name="TituloPause" type="Label" parent="HUD/MenuPause/VBoxContainer" unique_id=1756593733]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Pausado"
+text = "Paused"
 horizontal_alignment = 1
 
 [node name="BotãoContinuar" type="Button" parent="HUD/MenuPause/VBoxContainer" unique_id=742504313]
@@ -240,14 +266,14 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_0sup3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_irlkx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_740cl")
-text = "Reiniciar"
+text = "restart"
 
 [node name="VoltaraoMenu" type="Button" parent="HUD/MenuPause/VBoxContainer" unique_id=1439419814]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_cyinj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ov2kt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8pv47")
-text = "Voltar ao Menu"
+text = "Menu"
 
 [node name="TextureButton" type="TextureButton" parent="HUD" unique_id=230844297]
 process_mode = 3
@@ -257,6 +283,36 @@ offset_right = 1655.0
 offset_bottom = 532.0
 scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("10_jqn4b")
+
+[node name="GameOverPanel" type="Panel" parent="HUD" unique_id=1300200619]
+offset_left = 399.0
+offset_top = 173.0
+offset_right = 752.0
+offset_bottom = 410.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsbkq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/GameOverPanel" unique_id=1290376132]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 342.0
+offset_bottom = 174.0
+
+[node name="TituloGameOver" type="Label" parent="HUD/GameOverPanel/VBoxContainer" unique_id=1891201991]
+layout_mode = 2
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="ScoreFinalLabel" type="Label" parent="HUD/GameOverPanel/VBoxContainer" unique_id=1245284915]
+layout_mode = 2
+text = "Final Score: 0"
+horizontal_alignment = 1
+
+[node name="Reiniciar" type="Label" parent="HUD/GameOverPanel/VBoxContainer" unique_id=415831168]
+layout_mode = 2
+text = "Press SPACE or 
+ENTER to restart"
+horizontal_alignment = 1
 
 [node name="MusicaFundo" type="AudioStreamPlayer2D" parent="." unique_id=969123502]
 position = Vector2(-3, 0)
